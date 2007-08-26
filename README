@@ -1,0 +1,128 @@
+taglib
+------------------------------------------
+TagLib is a library for reading and editing the meta-data of several
+popular audio formats. Currently it supports both ID3v1 and ID3v2 for
+MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC
+files.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  zlib-1.2.3-2
+
+Build requirements:
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.7-1.7.9-3
+  binutils-20060817-1
+  cygport-0.3.5-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+  zlib-1.2.3-2
+
+Canonical website:
+  http://developer.kde.org/~wheeler/taglib.html
+
+Canonical download:
+  http://developer.kde.org/~wheeler/files/src/
+
+-------------------------------------------
+
+Build instructions:
+  unpack taglib-1.4-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./taglib-1.4-X.cygport all
+
+This will create:
+  /usr/src/taglib-1.4-X-src.tar.bz2
+  /usr/src/taglib-1.4-X.tar.bz2
+  /usr/src/taglib-devel-1.4-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(taglib)
+  /usr/bin/cygtag-1.dll
+  /usr/bin/cygtag_c-0.dll
+  /usr/share/doc/Cygwin/taglib-1.4.README
+  /usr/share/doc/taglib-1.4/AUTHORS
+  /usr/share/doc/taglib-1.4/ChangeLog
+  /usr/share/doc/taglib-1.4/COPYING
+  /usr/share/doc/taglib-1.4/INSTALL
+  /usr/share/doc/taglib-1.4/README
+  /usr/share/doc/taglib-1.4/TODO
+
+(taglib-devel)
+  /usr/bin/taglib-config
+  /usr/include/taglib/apefooter.h
+  /usr/include/taglib/apeitem.h
+  /usr/include/taglib/apetag.h
+  /usr/include/taglib/attachedpictureframe.h
+  /usr/include/taglib/audioproperties.h
+  /usr/include/taglib/commentsframe.h
+  /usr/include/taglib/fileref.h
+  /usr/include/taglib/flacfile.h
+  /usr/include/taglib/flacproperties.h
+  /usr/include/taglib/id3v1genres.h
+  /usr/include/taglib/id3v1tag.h
+  /usr/include/taglib/id3v2extendedheader.h
+  /usr/include/taglib/id3v2footer.h
+  /usr/include/taglib/id3v2frame.h
+  /usr/include/taglib/id3v2framefactory.h
+  /usr/include/taglib/id3v2header.h
+  /usr/include/taglib/id3v2synchdata.h
+  /usr/include/taglib/id3v2tag.h
+  /usr/include/taglib/mpcfile.h
+  /usr/include/taglib/mpcproperties.h
+  /usr/include/taglib/mpegfile.h
+  /usr/include/taglib/mpegheader.h
+  /usr/include/taglib/mpegproperties.h
+  /usr/include/taglib/oggfile.h
+  /usr/include/taglib/oggflacfile.h
+  /usr/include/taglib/oggpage.h
+  /usr/include/taglib/oggpageheader.h
+  /usr/include/taglib/relativevolumeframe.h
+  /usr/include/taglib/tag.h
+  /usr/include/taglib/taglib.h
+  /usr/include/taglib/tag_c.h
+  /usr/include/taglib/tbytevector.h
+  /usr/include/taglib/tbytevectorlist.h
+  /usr/include/taglib/textidentificationframe.h
+  /usr/include/taglib/tfile.h
+  /usr/include/taglib/tlist.h
+  /usr/include/taglib/tlist.tcc
+  /usr/include/taglib/tmap.h
+  /usr/include/taglib/tmap.tcc
+  /usr/include/taglib/tstring.h
+  /usr/include/taglib/tstringlist.h
+  /usr/include/taglib/uniquefileidentifierframe.h
+  /usr/include/taglib/unknownframe.h
+  /usr/include/taglib/vorbisfile.h
+  /usr/include/taglib/vorbisproperties.h
+  /usr/include/taglib/xingheader.h
+  /usr/include/taglib/xiphcomment.h
+  /usr/lib/libtag.dll.a
+  /usr/lib/libtag.la
+  /usr/lib/libtag_c.dll.a
+  /usr/lib/libtag_c.la
+  /usr/lib/pkgconfig/taglib.pc
+
+------------------
+
+Port Notes:
+
+----- version 1.4-2 -----
+Rebuilt with cygport.
+
+----- version 1.4-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
