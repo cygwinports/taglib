@@ -6,22 +6,20 @@ MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC
 files.
 
 Runtime requirements:
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   zlib-1.2.3-2
 
-Build requirements:
-  cygwin-1.5.24-2
+Additional build requirements:
   autoconf2.5-2.61-1
-  automake1.7-1.7.9-3
+  automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.3.5-1
-  gawk-3.1.5-4
+  cygport-0.3.8-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
   libtool1.5-1.5.23a-2
   make-3.81-1
   sed-4.1.5-2
-  zlib-1.2.3-2
 
 Canonical website:
   http://developer.kde.org/~wheeler/taglib.html
@@ -32,16 +30,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack taglib-1.4-X-src.tar.bz2
+  unpack taglib-1.5-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./taglib-1.4-X.cygport all
+  cygport ./taglib-1.5-X.cygport all
 
 This will create:
-  /usr/src/taglib-1.4-X-src.tar.bz2
-  /usr/src/taglib-1.4-X.tar.bz2
-  /usr/src/taglib-devel-1.4-X.tar.bz2
+  /usr/src/taglib-1.5-X-src.tar.bz2
+  /usr/src/taglib-1.5-X.tar.bz2
+  /usr/src/taglib-devel-1.5-X.tar.bz2
 
 -------------------------------------------
 
@@ -50,13 +48,9 @@ Files included in the binary packages:
 (taglib)
   /usr/bin/cygtag-1.dll
   /usr/bin/cygtag_c-0.dll
-  /usr/share/doc/Cygwin/taglib-1.4.README
-  /usr/share/doc/taglib-1.4/AUTHORS
-  /usr/share/doc/taglib-1.4/ChangeLog
-  /usr/share/doc/taglib-1.4/COPYING
-  /usr/share/doc/taglib-1.4/INSTALL
-  /usr/share/doc/taglib-1.4/README
-  /usr/share/doc/taglib-1.4/TODO
+  /usr/share/doc/Cygwin/taglib-1.5.README
+  /usr/share/doc/taglib-1.5/AUTHORS
+  /usr/share/doc/taglib-1.5/INSTALL
 
 (taglib-devel)
   /usr/bin/taglib-config
@@ -69,6 +63,7 @@ Files included in the binary packages:
   /usr/include/taglib/fileref.h
   /usr/include/taglib/flacfile.h
   /usr/include/taglib/flacproperties.h
+  /usr/include/taglib/generalencapsulatedobjectframe.h
   /usr/include/taglib/id3v1genres.h
   /usr/include/taglib/id3v1tag.h
   /usr/include/taglib/id3v2extendedheader.h
@@ -88,9 +83,12 @@ Files included in the binary packages:
   /usr/include/taglib/oggpage.h
   /usr/include/taglib/oggpageheader.h
   /usr/include/taglib/relativevolumeframe.h
+  /usr/include/taglib/speexfile.h
+  /usr/include/taglib/speexproperties.h
   /usr/include/taglib/tag.h
-  /usr/include/taglib/taglib.h
   /usr/include/taglib/tag_c.h
+  /usr/include/taglib/taglib.h
+  /usr/include/taglib/taglib_export.h
   /usr/include/taglib/tbytevector.h
   /usr/include/taglib/tbytevectorlist.h
   /usr/include/taglib/textidentificationframe.h
@@ -99,12 +97,18 @@ Files included in the binary packages:
   /usr/include/taglib/tlist.tcc
   /usr/include/taglib/tmap.h
   /usr/include/taglib/tmap.tcc
+  /usr/include/taglib/trueaudiofile.h
+  /usr/include/taglib/trueaudioproperties.h
   /usr/include/taglib/tstring.h
   /usr/include/taglib/tstringlist.h
   /usr/include/taglib/uniquefileidentifierframe.h
   /usr/include/taglib/unknownframe.h
+  /usr/include/taglib/unsynchronizedlyricsframe.h
+  /usr/include/taglib/urllinkframe.h
   /usr/include/taglib/vorbisfile.h
   /usr/include/taglib/vorbisproperties.h
+  /usr/include/taglib/wavpackfile.h
+  /usr/include/taglib/wavpackproperties.h
   /usr/include/taglib/xingheader.h
   /usr/include/taglib/xiphcomment.h
   /usr/lib/libtag.dll.a
@@ -112,10 +116,14 @@ Files included in the binary packages:
   /usr/lib/libtag_c.dll.a
   /usr/lib/libtag_c.la
   /usr/lib/pkgconfig/taglib.pc
+  /usr/lib/pkgconfig/taglib_c.pc
 
 ------------------
 
 Port Notes:
+
+----- version 1.5-1 -----
+Version bump.
 
 ----- version 1.4-2 -----
 Rebuilt with cygport.

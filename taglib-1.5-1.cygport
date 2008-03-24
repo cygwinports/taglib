@@ -1,0 +1,7 @@
+inherit kde3
+
+DESCRIPTION="Audio metadata library"
+HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
+SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
+
+CYGCONF_ARGS="--includedir=/usr/include"
