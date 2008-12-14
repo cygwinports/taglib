@@ -1,6 +1,7 @@
 category: Audio
 requires: cygwin zlib
-sdesc: "Library for reading and editing audio metadata (runtime)"
+external-source: taglib
+sdesc: "Library for reading and editing audio metadata (C++ runtime)"
 ldesc: "TagLib is a library for reading and editing the meta-data of several
 popular audio formats. Currently it supports both ID3v1 and ID3v2 for
 MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC

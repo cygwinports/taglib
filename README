@@ -45,14 +45,15 @@ This will create:
 
 Files included in the binary packages:
 
-(taglib)
+(libtag1)
   /usr/bin/cygtag-1.dll
-  /usr/bin/cygtag_c-0.dll
-  /usr/share/doc/Cygwin/taglib-1.5.README
   /usr/share/doc/taglib-1.5/AUTHORS
   /usr/share/doc/taglib-1.5/INSTALL
 
-(taglib-devel)
+(libtag_c0)
+  /usr/bin/cygtag_c-0.dll
+
+(libtag-devel)
   /usr/bin/taglib-config
   /usr/include/taglib/apefooter.h
   /usr/include/taglib/apeitem.h
@@ -86,7 +87,6 @@ Files included in the binary packages:
   /usr/include/taglib/speexfile.h
   /usr/include/taglib/speexproperties.h
   /usr/include/taglib/tag.h
-  /usr/include/taglib/tag_c.h
   /usr/include/taglib/taglib.h
   /usr/include/taglib/taglib_export.h
   /usr/include/taglib/tbytevector.h
@@ -111,11 +111,16 @@ Files included in the binary packages:
   /usr/include/taglib/wavpackproperties.h
   /usr/include/taglib/xingheader.h
   /usr/include/taglib/xiphcomment.h
+  /usr/lib/libtag.a
   /usr/lib/libtag.dll.a
   /usr/lib/libtag.la
+  /usr/lib/pkgconfig/taglib.pc
+
+(libtag_c-devel)
+  /usr/include/taglib/tag_c.h
+  /usr/lib/libtag_c.a
   /usr/lib/libtag_c.dll.a
   /usr/lib/libtag_c.la
-  /usr/lib/pkgconfig/taglib.pc
   /usr/lib/pkgconfig/taglib_c.pc
 
 ------------------
