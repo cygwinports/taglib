@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libtag1
+requires: cygwin libgcc1 libstdc++6 libtag1
 external-source: taglib
 sdesc: "Library for reading and editing audio metadata (C runtime)"
 ldesc: "TagLib is a library for reading and editing the meta-data of several
