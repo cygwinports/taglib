@@ -1,11 +1,8 @@
-inherit kde3
+inherit cmake
 
 DESCRIPTION="Audio metadata library"
 HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
 SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
-PATCH_URI="
-	1.5-doxygen-vpath.patch
-"
 
 PKG_NAMES="${PN} libtag1 libtag-devel libtag_c0 libtag_c-devel"
 libtag1_CONTENTS="usr/bin/cygtag-1.dll usr/share/doc/"
@@ -15,10 +12,4 @@ libtag_c0_CONTENTS="usr/bin/cygtag_c-0.dll"
 libtag_c_devel_CONTENTS="usr/include/taglib/tag_c.h usr/lib/libtag_c.*
                          usr/lib/pkgconfig/taglib_c.pc"
 
-src_compile() {
-	cd ${S}
-	kde3_autoreconf
-	cd ${B}
-	cygconf --enable-asf --enable-mp4
-	cygmake
-}
+CYGCMAKE_ARGS="-DWITH_ASF=ON -DWITH_MP4=ON"
