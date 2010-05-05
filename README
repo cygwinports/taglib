@@ -6,15 +6,15 @@ MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC
 files.
 
 Runtime requirements:
-  cygwin-1.7.1-1
+  cygwin-1.7.5-1
   libgcc1-4.3.4-3
   libstdc++6-4.3.4-3
   zlib0-1.2.3-10
 
 Additional build requirements:
-  binutils-2.19.51-1
+  binutils-2.20.51-1
   cmake-2.8.0-11
-  cygport-0.9.80-1
+  cygport-0.9.83-1
   gcc4-core-4.3.4-3
   gcc4-g++-4.3.4-3
   make-3.81-2
@@ -28,22 +28,25 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack taglib-1.6.1-X-src.tar.bz2
+  unpack taglib-1.6.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./taglib-1.6.1-X.cygport all
+  cygport ./taglib-1.6.3-X.cygport all
 
 This will create:
-  /usr/src/libtag-devel-1.6.1-X.tar.bz2
-  /usr/src/libtag_c-devel-1.6.1-X.tar.bz2
-  /usr/src/libtag_c0-1.6.1-X.tar.bz2
-  /usr/src/libtag1-1.6.1-X.tar.bz2
-  /usr/src/taglib-1.6.1-X-src.tar.bz2
+  /usr/src/libtag-devel-1.6.3-X.tar.bz2
+  /usr/src/libtag_c-devel-1.6.3-X.tar.bz2
+  /usr/src/libtag_c0-1.6.3-X.tar.bz2
+  /usr/src/libtag1-1.6.3-X.tar.bz2
+  /usr/src/taglib-1.6.3-X-src.tar.bz2
 
 -------------------------------------------
 
 Port Notes:
+
+----- version 1.6.3-1 -----
+Version bump.
 
 ----- version 1.6.1-1 -----
 Version bump.
