@@ -1,0 +1,28 @@
+inherit cmake
+
+NAME="taglib"
+VERSION=1.8
+RELEASE=1
+CATEGORY="Audio"
+SUMMARY="Audio metadata library"
+DESCRIPTION="TagLib is a library for reading and editing the meta-data of
+several popular audio formats. Currently it supports both ID3v1 and ID3v2
+for MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC,
+MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4 and ASF files."
+HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
+SRC_URI="https://github.com/downloads/taglib/${NAME}/${NAME}-${VERSION}.tar.gz"
+
+PKG_NAMES="libtag1 libtag-devel libtag_c0 libtag_c-devel"
+libtag1_SUMMARY="${SUMMARY} (C++ runtime)"
+libtag1_CONTENTS="usr/bin/cygtag-1.dll usr/share/doc/"
+libtag_devel_SUMMARY="${SUMMARY} (C++ development)"
+libtag_devel_CONTENTS="--exclude=*tag_c* usr/bin/*-config usr/include/
+                       usr/lib/libtag.* usr/lib/pkgconfig/taglib.pc"
+libtag_c0_SUMMARY="${SUMMARY} (C bindings runtime)"
+libtag_c0_CONTENTS="usr/bin/cygtag_c-0.dll"
+libtag_c_devel_SUMMARY="${SUMMARY} (C bindings development)"
+libtag_c_devel_CONTENTS="usr/include/taglib/tag_c.h usr/lib/libtag_c.*
+                         usr/lib/pkgconfig/taglib_c.pc"
+
+DIFF_EXCLUDES="Doxyfile"
+CYGCMAKE_ARGS="-DWITH_ASF=ON -DWITH_MP4=ON"
