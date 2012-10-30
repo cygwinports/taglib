@@ -1,0 +1,11 @@
+--- origsrc/taglib-1.8/taglib/toolkit/taglib.h	2012-09-06 13:03:15.000000000 -0500
++++ src/taglib-1.8/taglib/toolkit/taglib.h	2012-10-30 11:54:06.768067700 -0500
+@@ -47,7 +47,7 @@
+ #ifdef __APPLE__
+ #  include <libkern/OSAtomic.h>
+ #  define TAGLIB_ATOMIC_MAC
+-#elif defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__CYGWIN__)
++#elif defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
+ #  define NOMINMAX
+ #  include <windows.h>
+ #  define TAGLIB_ATOMIC_WIN
