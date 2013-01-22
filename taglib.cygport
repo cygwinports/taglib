@@ -2,7 +2,7 @@ inherit cmake
 
 NAME="taglib"
 VERSION=1.8
-RELEASE=2
+RELEASE=3
 CATEGORY="Audio"
 SUMMARY="Audio metadata library"
 DESCRIPTION="TagLib is a library for reading and editing the meta-data of
@@ -11,7 +11,11 @@ for MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC,
 MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4 and ASF files."
 HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
 SRC_URI="https://github.com/downloads/taglib/${NAME}/${NAME}-${VERSION}.tar.gz"
-PATCH_URI="01-no-win32.patch"
+
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/taglib.git/plain/taglib-1.8-version.patch
+	01-no-win32.patch
+"
 
 PKG_NAMES="libtag1 libtag-devel libtag_c0 libtag_c-devel"
 libtag1_SUMMARY="${SUMMARY} (C++ runtime)"
