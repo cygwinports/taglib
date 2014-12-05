@@ -1,6 +1,6 @@
---- origsrc/taglib-1.8/taglib/toolkit/taglib.h	2012-09-06 13:03:15.000000000 -0500
-+++ src/taglib-1.8/taglib/toolkit/taglib.h	2012-10-30 11:54:06.768067700 -0500
-@@ -47,7 +47,7 @@
+--- origsrc/taglib-1.9.1/taglib/toolkit/trefcounter.h	2013-10-08 10:50:01.000000000 -0500
++++ src/taglib-1.9.1/taglib/toolkit/trefcounter.h	2014-12-05 12:41:29.675151900 -0600
+@@ -32,7 +32,7 @@
  #ifdef __APPLE__
  #  include <libkern/OSAtomic.h>
  #  define TAGLIB_ATOMIC_MAC

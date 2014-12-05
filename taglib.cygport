@@ -1,20 +1,22 @@
 inherit cmake
 
 NAME="taglib"
-VERSION=1.8
-RELEASE=3
+VERSION=1.9.1
+RELEASE=1
 CATEGORY="Audio"
 SUMMARY="Audio metadata library"
 DESCRIPTION="TagLib is a library for reading and editing the meta-data of
 several popular audio formats. Currently it supports both ID3v1 and ID3v2
 for MP3 files, Ogg Vorbis comments and ID3 tags and Vorbis comments in FLAC,
 MPC, Speex, WavPack TrueAudio, WAV, AIFF, MP4 and ASF files."
-HOMEPAGE="http://developer.kde.org/~wheeler/taglib.html"
-SRC_URI="https://github.com/downloads/taglib/${NAME}/${NAME}-${VERSION}.tar.gz"
-
+HOMEPAGE="https://taglib.github.io/"
+SRC_URI="https://taglib.github.io/releases/taglib-${VERSION}.tar.gz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/taglib.git/plain/taglib-1.8-version.patch
-	01-no-win32.patch
+	http://pkgs.fedoraproject.org/cgit/taglib.git/plain/0002-Fixed-ABI-breakage-in-TagLib-String.patch
+	http://pkgs.fedoraproject.org/cgit/taglib.git/plain/0003-Rewrote-ByteVector-replace-simpler.patch
+	http://pkgs.fedoraproject.org/cgit/taglib.git/plain/0001-Fixed-a-wrong-byte-order-handling-on-big-endian-mach.patch
+	http://pkgs.fedoraproject.org/cgit/taglib.git/plain/0001-Added-some-missing-deletes-to-test_flac.cpp.patch
+	1.9.1-cygwin.patch
 "
 
 PKG_NAMES="libtag1 libtag-devel libtag_c0 libtag_c-devel"
