@@ -6,6 +6,6 @@
  #  define TAGLIB_ATOMIC_MAC
 -#elif defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__CYGWIN__)
 +#elif defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
- #  define NOMINMAX
- #  include <windows.h>
- #  define TAGLIB_ATOMIC_WIN
+ #  ifndef NOMINMAX
+ #    define NOMINMAX
+ #  endif
